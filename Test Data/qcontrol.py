@@ -1,12 +1,11 @@
 import pandas as pd
 import sys
-import csv
 
 #Prints a welcome message to the user
 print("Welcome to the Quality Index assesment") , sys.argv[0]
 
 #Imports the csv_file in a readable way
-csv_file = pd.read_csv("testdata1.csv")
+csv_file = pd.read_csv(testdata1.csv)
 df = pd.DataFrame(csv_file)
 
 # Creates a series from the CSV test data displaying the first column
