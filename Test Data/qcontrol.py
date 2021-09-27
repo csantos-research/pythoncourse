@@ -1,16 +1,17 @@
 import pandas as pd
-import sis
+import sys
+import csv
 
 #Prints a welcome message to the user
 print("Welcome to the Quality Index assesment") , sys.argv[0]
 
 #Imports the csv_file in a readable way
-csv_file = pd.read("testdata1.csv")
+csv_file = pd.read_csv("testdata1.csv")
 df = pd.DataFrame(csv_file)
 
 # Creates a series from the CSV test data displaying the first column
-s = df["Insulin"]
-se = pd.Series(s)
+#s = df["Insulin"]
+se = pd.Series(df)
 
 #Prints out the column data
 se
@@ -29,8 +30,8 @@ quality = min(csv_file/max(csv_file))
 print (min(csv_file))
 print (max(csv_file))
 
-def  qresult:
-    if quality < 3:
+def qresult(quality):
+    if quality > 3:
         print ("Good job!")
     else:
         print ("Try again :(")
