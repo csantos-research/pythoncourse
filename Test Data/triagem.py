@@ -2,8 +2,7 @@ import pandas as pd
 import sys
 
 #Prints a welcome message to the user
-print("Welcome to the Quality Index assesment")
-print()
+print("Welcome to the Quality Index assesment") , sys.argv[0]
 
 #Imports the csv_file in a readable way
 csv_file = pd.read_csv("/home/cake/github/pythoncourse/Test Data/testdata1.csv")
@@ -18,15 +17,14 @@ print(se)
 
 #Appends the content of the test file to a "Results" file
 
-#results_csv = pd.read_csv("/home/cake/github/pythoncourse/Test Data/results.csv")
-#dr = pd.DataFrame(results_csv)
-#dr["New Data"] = s
-df["Insulin"].to_csv('results.csv', mode='w', index=False, header=False)
+results_csv = pd.read_csv("/home/cake/github/pythoncourse/Test Data/results.csv")
+dr = pd.DataFrame(results_csv)
+
+dr["New Data"] = s
 
 #Calculates the quality index of the experiment
-print("----------------------------------------------------")
-print()
-print(df["Insulin"].describe())
+
+df["Insulin"].describe()
 
 p = df["Insulin"].max()
 b = df["Insulin"].min()
@@ -41,14 +39,4 @@ def qresult(quality):
     else:
         print ("Try again :(")
 
-print ("The quality index is" , quality)
 print (qresult(quality))
-
-#Finally, we plot the data
-import matplotlib.pyplot as plt
-
-fig, axs = plt.subplots(figsize=(16, 5))
-df.plot(ax=axs)
-axs.set_ylabel("Insulin in ng/min")
-fig.savefig("Insulin secretion.png")
-#plt.show()
