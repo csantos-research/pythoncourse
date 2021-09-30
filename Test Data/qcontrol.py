@@ -36,7 +36,7 @@ print ("The peak is" , p)
 print ("The minimum is" , b)
 
 def qresult(quality):
-    if quality > 3:
+    if quality > 5:
         print ("Good job!")
     else:
         print ("Try again :(")
