@@ -12,6 +12,7 @@ Change the qcontrol.py script to include the right directory of the test data.
 2. Matplotlib.pyplot
 
 More information on the Pandas package is available on https://pandas.pydata.org/pandas-docs/stable/getting_started/overview.html
+
 For a full explanation on the Matplotlib.pyplot functions please read https://matplotlib.org/stable/api/pyplot_summary.html#
 
 ## How to run
